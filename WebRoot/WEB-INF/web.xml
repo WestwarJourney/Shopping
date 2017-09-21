@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>web_138</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+
+  <servlet><!--注册用户名验证-->  
+	<servlet-name>yuname</servlet-name>
+  	<servlet-class>servlet.YuNameServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>yuname</servlet-name>
+  	<url-pattern>/yuname.do</url-pattern>
+  </servlet-mapping>
+  <servlet><!--注册密码验证-->  
+	<servlet-name>ypassword</servlet-name>
+  	<servlet-class>servlet.Ypassword</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ypassword</servlet-name>
+  	<url-pattern>/ypassword.do</url-pattern>
+  </servlet-mapping>
+  <servlet><!--注册-->  
+	<servlet-name>regist</servlet-name>
+  	<servlet-class>servlet.RegistServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>regist</servlet-name>
+  	<url-pattern>/regist.do</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
